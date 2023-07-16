@@ -6,6 +6,7 @@ using Nautilus.Utility;
 using UnityEngine;
 using Nautilus.Assets.PrefabTemplates;
 using static CraftData;
+using RamuneLib;
 #if SUBNAUTICA
 using Ingredient = CraftData.Ingredient;
 #endif
@@ -26,7 +27,7 @@ namespace MoreLockers
     {
         public static PrefabInfo Info { get; } = PrefabInfo.WithTechType("OpenLocker", "Open Locker", "A locker without a door.")
             // set the icon to that of the vanilla locker:
-            .WithIcon(SpriteManager.Get(TechType.Locker));
+            .WithIcon(Utilities.GetSprite("OpenLocker"));
 
         public static void Register()
         {

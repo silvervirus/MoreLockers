@@ -71,3 +71,4 @@ C:\Users\Cookay\source\repos\MoreLockers\MoreLockers\obj\Debug\MoreLockers.cspro
 C:\Users\Cookay\source\repos\MoreLockers\MoreLockers\obj\Debug\MoreLockers.csproj.CopyComplete
 C:\Users\Cookay\source\repos\MoreLockers\MoreLockers\obj\Debug\MoreLockers.dll
 C:\Users\Cookay\source\repos\MoreLockers\MoreLockers\obj\Debug\MoreLockers.pdb
+C:\Users\Cookay\source\repos\MoreLockers\MoreLockers\obj\Debug\MoreLockers.csproj.AssemblyReference.cache

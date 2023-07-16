@@ -6,6 +6,7 @@ using Nautilus.Utility;
 using UnityEngine;
 using Nautilus.Assets.PrefabTemplates;
 using static CraftData;
+using RamuneLib;
 #if SUBNAUTICA
 using Ingredient = CraftData.Ingredient;
 #endif
@@ -24,9 +25,9 @@ namespace MoreLockers
 
     public static class BuildableTallLocker
     {
-        public static PrefabInfo Info { get; } = PrefabInfo.WithTechType("TallLocker", "Tall Locker", "A tall locker.")
+        public static PrefabInfo Info { get; } = PrefabInfo.WithTechType("LeeLocker", "Tall Locker", "A tall locker.")
             // set the icon to that of the vanilla locker:
-            .WithIcon(SpriteManager.Get(TechType.Locker));
+            .WithIcon(Utilities.GetSprite("TallLocker"));
 
         public static void Register()
         {
@@ -48,7 +49,7 @@ namespace MoreLockers
                 // add all components necessary for it to be built:
                 PrefabUtils.AddConstructable(obj, Info.TechType, constructableFlags,model);
                 // allow it to be opened as a storage container:
-                PrefabUtils.AddStorageContainer(obj, "StorageRoot", "TallLocker", 3, 8, true);
+                PrefabUtils.AddStorageContainer(obj, "StorageRoot", "LeeLocker", 3, 8, true);
                 
             };
 

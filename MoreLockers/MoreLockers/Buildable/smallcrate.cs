@@ -6,6 +6,7 @@ using Nautilus.Utility;
 using UnityEngine;
 using Nautilus.Assets.PrefabTemplates;
 using static CraftData;
+using RamuneLib;
 #if SUBNAUTICA
 using Ingredient = CraftData.Ingredient;
 #endif
@@ -26,7 +27,7 @@ namespace MoreLockers
     {
         public static PrefabInfo Info { get; } = PrefabInfo.WithTechType("scrate", "SmallCrate", "a crate.")
             // set the icon to that of the vanilla locker:
-            .WithIcon(SpriteManager.Get(TechType.Locker));
+            .WithIcon(Utilities.GetSprite("SmallCrate"));
 
         public static void Register()
         {
@@ -40,7 +41,7 @@ namespace MoreLockers
             scrate.ModifyPrefab += obj =>
             {
                 // allow it to be placced inside bases and submarines on the ground, and can be rotated:
-                ConstructableFlags constructableFlags = ConstructableFlags.Inside | ConstructableFlags.Rotatable | ConstructableFlags.Ground | ConstructableFlags.Submarine;
+                ConstructableFlags constructableFlags = ConstructableFlags.Inside | ConstructableFlags.Rotatable | ConstructableFlags.Ground | ConstructableFlags.Submarine | ConstructableFlags.Rotatable;
                 // find the object that holds the model:
                 GameObject model = obj.transform.Find("Starship_cargo_02").gameObject;
                 // this line is only necessary for the tall locker so that the door is also part of the model:
@@ -48,7 +49,7 @@ namespace MoreLockers
                 // add all components necessary for it to be built:
                 PrefabUtils.AddConstructable(obj, Info.TechType, constructableFlags,model);
                 // allow it to be opened as a storage container:
-                PrefabUtils.AddStorageContainer(obj, "StorageRoot", "SmallCrate", 6, 6, true);
+                PrefabUtils.AddStorageContainer(obj, "StorageRoot", "SmallCrate", 8, 8, true);
                 
             };
 

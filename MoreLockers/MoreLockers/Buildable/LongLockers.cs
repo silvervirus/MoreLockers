@@ -3,6 +3,7 @@ using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Crafting;
 using Nautilus.Utility;
+using RamuneLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace MoreLockers
         {
             public static PrefabInfo Info { get; } = PrefabInfo.WithTechType("LongLocker", "Long Locker", "A long locker.")
                 // set the icon to that of the vanilla locker:
-                .WithIcon(SpriteManager.Get(TechType.Locker));
+                .WithIcon(Utilities.GetSprite("LongLocker"));
 
             public static void Register()
             {
@@ -51,7 +52,7 @@ namespace MoreLockers
                     // add all components necessary for it to be built:
                     PrefabUtils.AddConstructable(obj, Info.TechType, constructableFlags, model);
                     // allow it to be opened as a storage container:
-                    PrefabUtils.AddStorageContainer(obj , "StorageRoot", "LongLocker", 3, 8, true);
+                    PrefabUtils.AddStorageContainer(obj , "StorageRoot", "LongLocker", 8, 8, true);
                 };
 
                 // assign the created clone model to the prefab itself:

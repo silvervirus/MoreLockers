@@ -58,19 +58,22 @@
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buildable\HorizontalWallLockers.cs" />
-    <Compile Include="Buildable\keypad.cs" />
     <Compile Include="Buildable\LongLockers.cs" />
     <Compile Include="Buildable\smallcrate.cs" />
     <Compile Include="Buildable\Openlocker.cs" />
-    <Compile Include="Buildable\ForkLift.cs" />
+    <Compile Include="Buildable\LockerGirl.cs" />
+    <Compile Include="Buildable\SupplyCraft2.cs" />
     <Compile Include="Buildable\TallLocker.cs" />
-    <Compile Include="Buildable\SupplyCraft.cs" />
     <Compile Include="Morelockers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
